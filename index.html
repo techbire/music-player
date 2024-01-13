@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <!--------------------------- Font-awesome icon ------------------------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--------------------------- iconify-icon ----------------------------------->
+    <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+    <!--------------------------- Custom CSS ------------------------------------->
+<link rel="stylesheet" href="styles.css">
+    <!--------------------------- Custom FAVICON ------------------------------------->
+<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">  
+</head>
+
+<body>
+
+    <!---------------------- Music wrapper Start -------------->
+    <div class="wrapper">
+        <div class="wrapper-play">
+            <header>
+                <button class="headbtn">
+                    <i class="charm:sound-mutet"></i>
+                </button>
+                <div class="now-playing">PLAYING x OF y</div>
+                <button class="headbtn">
+                    <iconify-icon icon="mdi:playlist-music"
+                        style="color: #86898c; position: relative; top:5px; left:2px;" width="25" height="25"
+                        id="menu-list"></iconify-icon>
+                </button>
+            </header>
+            <div class="player">
+                <div class="image-area">
+                    <img src="">
+                </div>
+                <div class="song-details">
+                    <h1 class="name"></h1>
+                    <h3 class="artists"></h3>
+                </div>
+                <div class="audio-c">
+                    <div class="progress-area">
+                        <div class="progressbar">
+                            <audio id="m-audio" src="" type="audio/mp3"></audio>
+                        </div>
+                    </div>
+                    <div class="song-timer">
+                        <span class="current-time">0:00</span>
+                        <span class="max-duration">0:00</span>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="btn-c" onclick="randomMusic()">
+                        <i><iconify-icon icon="ion:shuffle-outline"></iconify-icon></i>  
+                    </button>
+                    <button class="btn-c" id="prev">
+                     <i><iconify-icon icon="mdi:skip-previous"></iconify-icon></i>  
+                    </button>
+                    <button class="play-pause btn-c">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <button class="btn-c" id="next">
+                        <i><iconify-icon icon="mdi:skip-next"></iconify-icon></i>
+                    </button>
+                    <button class="btn-c" onclick="repeatMusic()">
+                        <i><iconify-icon icon="radix-icons:loop"></iconify-icon></i>
+                    </button>
+                </div>
+            </div>
+
+            <!---------------- Music List Start --------------->
+            <div class="music-list">
+                <div class="header">
+                    <div class="row">
+                        <span class="m-list">Playing now</span>
+                    </div>
+                    <i class="fa-solid fa-xmark" id="close"></i>
+
+                </div>
+                <ul></ul>
+            </div>
+            <!-------------- Music List End ------------------->
+        </div>
+    </div>
+    <!----------------------- Music wrapper End ---------------->
+
+
+    <!---------------------- jqyery cdn ----------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!---------------------- Custom JS ------------------>
+    <script src="script.js"></script>
+</body>
+
+</html>
